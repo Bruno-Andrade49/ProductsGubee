@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos</title>
+
+    <style>
+        body{
+            background-color: rgb(48, 129, 102)
+        }
+
+        #titulo {
+            color: whitesmoke
+        }
+
+        td, tr, table {
+            border: 1px solid whitesmoke;
+            color: whitesmoke
+        }
+    </style>
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script> 
+<script type="text/javascript" src="main.js"></script>  
+
+</head>
+<body>
+    <h1 align="center" id="titulo"> Tabela de Produtos </h1>
+
+    <div align="center" id="filtro">
+    <input id = "Busca" type="text" size="20">
+    <button id="btn1" color="black" size="3" > FILTRAR STACK </button>
+    </div>
+
+    <div align="center" id="filtro">
+        <input id = "Busca2" type="text" size="20">
+        <button id="btn2" color="black" size="3" > FILTRAR MARKET PLACE </button>
+        </div>
+    <br/>
+    
+    <table align="center" border="5"id="tabela" >
+        <tr>
+            <td> Produto </td>
+            <td> Descrição </td>
+            <td> Market Place </td>
+
+            <td> Stack  </td>
+        </tr>
+  
+
+    </table>
+
+    <script src="main.js"></script>
+</body>
+</html>
