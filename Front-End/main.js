@@ -29,7 +29,7 @@ function main() {
     let data = getAPI("http://localhost:8080/produto/listagem")
     let usuarios = JSON.parse(data);
 
-    console.log(usuarios)
+    
 
     let tabela = document.getElementById("tabela");
 

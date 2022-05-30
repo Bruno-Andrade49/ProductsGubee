@@ -1,0 +1,22 @@
+create table produtos (
+productName Varchar(20),
+description Varchar(50),
+IdtargetMarket INT,
+Idstack INT,
+primary key(productName, targetMarket, stack))
+
+create table targetMarket (
+targetMarketId  INT,
+targetMarket    Varchar(20),
+productFK INT,
+primary key(targetMarketId),
+foreign key(productFK) references produtos(IdtargetMarket)
+)
+
+create table stack(
+stackId    INT,
+stack      VARCHAR(20),
+productFK  INT,
+primary key(stackID),
+foreign key(productFk) references produtos(idStack)
+)

@@ -14,6 +14,7 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
+//Classe que fornece conexão via HTTP com Produto 
 @WebServlet(name = "ProdutoController", urlPatterns = "/listagem")
 public class ProdutoController extends HttpServlet{
 
@@ -25,8 +26,10 @@ public class ProdutoController extends HttpServlet{
 	
 	ProdutoDAO produtoDAO = null;
 	
+	//Metodo GET
 	@Override 
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		//Configurações do Header da aplicação
 		resp.addHeader("Access-Control-Allow-Origin", "*");
 	    resp.addHeader("Access-Control-Allow-Methods", "POST, GET, OPTIONS, PUT, DELETE, HEAD");
 	    resp.addHeader("Access-Control-Allow-Headers", "X-PINGOTHER, Origin, X-Requested-With, Content-Type, Accept");
@@ -36,10 +39,13 @@ public class ProdutoController extends HttpServlet{
 		resp.setStatus(200);
 				
 		try {
+			
 			produtoDAO = new ProdutoDAO();
 			
 			PrintWriter pw = resp.getWriter();
+			
 			pw.print(gson.toJson(produtoDAO.listarProduto()));
+			
 			pw.flush();
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();

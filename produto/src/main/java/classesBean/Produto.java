@@ -1,23 +1,33 @@
 package classesBean;
 
+import java.util.List;
+
 public class Produto {
 
 	private String productName; // PK
 	private String description;
-	private String targetMarket;
-	private String stack;
 	
+	//Array que relaciona os TargetMarket a Produto
+	private List<TargetMarket> targetMarket;
+	
+	//Array que relaciona as stacks a Produto
+	private List<Stack> stack;
+	
+	//Classe entidade Produto
 	public Produto( ) {
 		
 	}
 
-	public Produto(String productName, String description, String targetMarket, String stack) {
+	//Construtor
+	public Produto(String productName, String description, List<TargetMarket> targetMarket, List<Stack> stack) {
 		this.productName = productName;
 		this.description = description;
 		this.targetMarket = targetMarket;
 		this.stack = stack;
 	}
 
+	//Encapsulamentos
+	
 	public String getProductName() {
 		return productName;
 	}
@@ -34,20 +44,24 @@ public class Produto {
 		this.description = description;
 	}
 
-	public String getTargetMarket() {
+	public List<TargetMarket> getTargetMarket() {
 		return targetMarket;
 	}
 
-	public void setTargetMarket(String array) {
-		this.targetMarket = array;
+	public void setTargetMarket(List<TargetMarket> targetMarket) {
+		this.targetMarket = targetMarket;
 	}
 
-	public String getStack() {
+	public List<Stack> getStack() {
 		return stack;
 	}
 
-	public void setStack(String array) {
-		this.stack = array;
+	public void setStack(List<Stack> stack) {
+		this.stack = stack;
 	}
+	
+	
+	
+	
 
 }

@@ -1,7 +1,0 @@
-Create Table produtos (
-productName VARCHAR(20),
-description VARCHAR(100),
-targetMarket VARCHAR(100),
-stack VARCHAR(100),
-PRIMARY KEY (productName)
-)
